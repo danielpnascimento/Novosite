@@ -1,0 +1,339 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17 de nov. de 2020, 17:25:23
+    Author     : DAN
+*/
+
+
+@media screen and (max-width: 1024px){
+
+    .titulopagina{
+        font-size: 14.5pt;   
+    }
+
+    #myBtnTopo {
+        padding: 0.3em;
+        bottom: 4em; 
+        right: -16px; 
+        letter-spacing:1px;
+    }
+
+    .myBtnTopo a {
+        font-size: 0.94em;
+    }
+
+    /*Inicio do Inicio*/
+    .inicio{
+        background-size: 100%;
+    }
+    .inicio h1{
+        left: 41%;
+        /*Auto ajuste do tamanho da fonte perante as telas*/
+        font-size: calc(1vw + 1vw + 0.8vmin);
+    }
+
+    .inicio h3{
+        left: 32%;
+        /*Auto ajuste do tamanho da fonte perante as telas*/
+        font-size: calc(0.6vw + 0.6vw + 0.15vmin);
+    }
+
+    button.btnInicio{
+        left: 32%;
+        /*mantem na posição fixa e se autoajusta*/
+        font-size: calc(0.6vw + 0.6vw + 0vmin);
+        transform: translate(-50%, 90%);
+    }
+
+    .palavra{
+        left: 8.0%;
+        /*mantem na posição fixa e se autoajusta*/
+        transform: translate(-50%, -77%);
+    }
+
+    /*Fim do Inicio*/
+
+
+    /*Inicio do sobre*/
+
+    h3.nome{
+        font-size: 14pt;
+    }
+
+    .sobtexto, .imgsob0{
+        /*Faz o preencimento do texto e img pega a largura completa*/
+        max-width: 100%; 
+    }
+
+    .leia {
+        font-size: calc(0.6vw + 0.6vw + 0vmin);
+    }
+
+    /*Fim do sobre*/
+
+
+    /*Inicio do habilidade*/
+
+    #habilidade{
+        padding-bottom: 4em;
+    }
+
+    .habilidade p{
+        padding-left: 0.9em;
+        padding-right: 0.9em;
+    }
+
+    /*Fim do habilidade*/
+
+
+    /*///Inicio do efeito do scroll animando\\\\*/
+
+    [data-animation="left"] {
+        transform: translateX(-6px);
+    }
+
+    [data-animation="right"] {
+        transform: translateX(6px);
+    }
+
+    /*///Fim do efeito do scroll animando\\\\*/
+
+
+    /*///Inicio do menu lateral responsivo\\\\*/
+
+    /*Retirar a coluna do nav para deixar o header, main e footer 100%*/
+    .col-1 {
+        /*Habilitar o absolute para auto preenchimento do background na vertical e 
+ conteudo ao inves de usar o display none para ocultar a coluna nav*/
+        position: absolute;  
+        min-width: 100%;
+        /*Habilita o z-index:-1 para deixar a col-1 abaixo no menu hamburger e sua função 
+  em execução*/
+        z-index: -1;
+    }
+
+    /*Deixa a coluna e conteúdo preenchendo a tela 100% após a saida da .col-1 / nav*/ 
+    .col-2 {
+        margin:0;
+    }
+
+    body {
+        transition: background-color 0.2s;
+    }
+
+    .shadow{
+        z-index:0;
+    }
+
+    .sidenav {
+        height: 100%;
+        width:0;
+        z-index:1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    /*Deixa o X e menu visivel para resolução ate 1023px, olha o modo que oculta
+    acima de 1024 em style geral nas class .closebtn, .bt_menulateral*/ 
+    .closebtn, .bt_menulateral{
+        display: block;
+    }
+
+    #mySidenav, .bt_menulateral{
+        /*Deixa o menu lateral e texto menu em 1ºplano 
+        desativado a posição do .closebtn, .bt_menulateral no style geral para as
+        demais resoluções acima*/
+        position: fixed;
+    }
+
+    /*////Fim do menu lateral responsivo\\\\*/
+
+    /*///Inicio do efeito do scroll animando modificado para tela < 1024px\\\\*/
+    [data-animation] {
+        opacity: 1;
+        transition: 1000ms;
+    }
+
+    [data-animation="fade"] {
+        transform: translateY(60px);
+    }
+
+    [data-animation="top"] {
+        transform: translateY(60px);
+    }
+
+    [data-animation="bottom"] {
+        transform: translateY(60px);
+    }
+
+    [data-animation="left"] {
+        transform: translateY(60px);
+    }
+
+    [data-animation="right"] {
+        transform: translateY(60px);
+    }
+
+    [data-animation].complete {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+
+}
+
+@media screen and (max-height: 414px) {
+
+    .topo{
+        /*Auto ajuste para o topo*/
+        margin-top: calc(8% + 0vh);
+    }
+
+    .image{
+        /*Aqui faz o auto ajuste do tamanho da logo substituindo o .shadow e efeito 
+se ajustar perante o flex que não acata espaço das laterais da .col-1 para 
+o responsivo paisagem*/ 
+        margin-left: calc(38% - 1em);
+        margin-right: calc(38% - 1em);
+    }
+
+    .title{
+        /*Distancia da logo com auto ajuste*/
+        padding-top: calc(1% - 0em);
+        font-size: 1.3em;
+    }
+
+    .subtitulo{
+        margin: -0.3em 0 0 0;
+        font-size: 0.95em;
+    }
+
+    #nav ul {
+        margin-right: calc(10% - 0em);
+    }
+
+    /*Efeitos no nav*/
+    nav a {
+        font-size: 1.1em ;
+        /*Auto ajuste da linhas*/
+        line-height: calc(0% + 7vh);
+    }    
+
+    .icons ul {
+        position: absolute;
+        bottom: 0.5em;
+    }
+
+    /*Botão do sobre*/
+    .leia{
+        font-size: calc(0.6vw + 0.6vw + 1vmin);
+    }
+
+}
+
+
+@media screen and (max-width: 414px) {
+
+    .topo{
+        /*Auto ajuste para o topo*/
+        margin-top: calc(15% + 0vh);
+    }
+
+    #nav ul {
+        margin: calc(0% + 3.9vh);
+    }
+
+    /*Efeitos no nav*/
+    nav a {
+        /*Auto ajuste da linhas*/
+        line-height: calc(0% + 7vh);
+    }  
+
+    button.btnInicio{
+        border-radius: 1.2px; 
+    }
+
+    /*Botão do sobre*/
+    .leia{
+        font-size: calc(0.6vw + 0.6vw + 1.5vmin);
+    }
+
+    /*Inicio Educação*/
+
+    .timeline-content {
+        width: 95%;
+        padding: 0 15px;
+    }
+
+    .container {
+        margin-left: 10%;
+    }
+
+    .timeline{
+        display: flex;
+        justify-content: center;
+        overflow-x: hidden;
+    }
+
+    .container:before {
+        left: 8px;
+        width: 2px;
+    }
+
+    .timeline-block {
+        width: 100%;
+    }
+
+    .timeline-block-right {
+        float: none;
+    }
+
+    .timeline-block-left {
+        float: none;
+        direction: ltr;
+    }
+
+    /*Fim Educação*/
+
+    /*Inicio do Portfolio*/
+
+    /*Pontos da paginação*/
+    .swiper-pagination-bullet{
+        width: 20px;
+    }
+
+    /*Distancia das laterais*/
+    .swiper-button-prev,
+    .swiper-container-rtl .swiper-button-next {
+        left: 2px;
+        right: auto;
+    }
+
+    .swiper-button-next,
+    .swiper-container-rtl .swiper-button-prev {
+        right: 2px;
+        left: auto;
+    }
+
+    /*Fim do Portfolio*/
+
+     /*///Inicio do Footer\\\\*/
+
+    footer{
+        font-size: 0.77em; 
+    }
+
+    /*////Fim do do Footer\\\\*/
+}
+
+
+
+
+
+
