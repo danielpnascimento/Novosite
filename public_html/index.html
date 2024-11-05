@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+Versão original
+https://codepen.io/cesimar/pen/NppKQQ
+-->
+<html>
+    <head>
+        <title>Contato 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style_contato_2_1.css"/>
+        <!-- Importando fontes do Google Fonts 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400"/>
+        -->
+
+        <!--CDN-->
+        <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" />-->
+
+        <!--Fonte de Icones local-->
+        <link rel="stylesheet" href="css/fontawesome-free-5.15.1-web/css/all.min.css"/>
+
+    </head>
+    <body>
+
+        <section id="contato">
+            <!-- Formulário de Contato -->
+            <!--<div class="container-contato">-->
+            <div class="contato">
+
+                <h2 class="titulopagina">CONTATO</h2>
+
+                <div class="background-cont">
+
+                    <!--Habilitando o formulario para o netlify com "recaptcha opcional"-->
+                    <form class="form" name="contact" method="POST" data-netlify="true">
+                        <h2>Opa, a hora e agora!!<br>Como posso te ajudar?</h2>
+                        <span class="barra"></span>
+                        <span class="barra1"></span>
+
+                        <label class="form-item">
+                            <!--Adcionando a classe name e seu tipo para o funcionamento, ordem no email e reconhecimento do netlify-->
+                            <input type="text" name="name" placeholder="Nome"/>
+                        </label>
+                        <label class="form-item">
+                            <input type="email" name="email" placeholder="Email"/>
+                        </label>
+                        <label class="form-item">
+                            <input type="text" name="assunto" placeholder="Assunto"/>
+                        </label>
+
+                        <label>
+                            <textarea class="input-text" name="message" placeholder="Escreva sua mensagem"></textarea>
+                        </label>
+                        <!--Adcionando a classe actions para o funcionamento do netlify-->
+                        <!--Sem a classe actions funcionou!!-->
+                        <div class="enviar">
+                            <button type="submit" class="btn">ENVIAR MENSAGEM</button>
+                        </div>
+
+                    </form>
+
+                    <div class="contatodireto">
+                        <div class="email">
+                            <a href="mailto:daniel.p.nasciment@gmail.com?subject=Olá, envie sua mensagem, responderei em breve. Obrigado!%20" target="_blank"><i class="icon solid fa fa-envelope"></i>&nbsp Email</a>
+                            <h1>daniel.p.nasciment@gmail.com</h1>
+                        </div>
+                        <div class="whats">
+                            <a href="https://api.whatsapp.com/send?phone=5511972197978" target="_blank"><i class="fab fa-whatsapp"></i>&nbsp Whatsapp</a>
+                            <h1>011 972197978</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+    </body>
+</html>
+
+<!--
+
+Para funcionar o email com o Netlify e simples!
+1- Habilita/adcionar o data-netlify="true" dentro da tag form
+2- Habilita/adcionar a class name"" dos campos para reconhecimento e ordem 
+3- Pronto só subir a pasta do projeto public_html ele vai processar e receber internamente no campo fomulários ativos!
+4- Para que seja enviado para o gmail tem que ir em notificações de formularios
+5- ir em Notificações de envio de formulário\adcionar\Notificação por e-mail
+6- Colocar o email desejado em E-mail para notificar e pronto!
+
+Lembrando que a detecção de formulário tem que esta habilitado em cada projeto!
+1- Clicar no projeto
+2- Lado direito em forms
+3- Clicar no botão Habilitar detecção de formulário
+4- vai habilitar a opção automaticamente em notificação de envio de formulário
+5- Agora e só fazer o passo acima!!
+
+Constatação de falha!
+Ao realizar o teste de envio e não for checar se o email do formulario e curto tipo 
+carina@gmail.com assim não vai!
+carina.nascimento@gmail.com assim vai!
+
+
+-->
